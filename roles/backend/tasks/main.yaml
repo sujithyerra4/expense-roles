@@ -26,7 +26,7 @@
 - name: import tasks from common role
   ansible.builtin.import_role:
     name: common
-    tasks_from: preq
+    tasks_from: app-pre-req
 
 # - name: creating directory
 #   ansible.builtin.file:
