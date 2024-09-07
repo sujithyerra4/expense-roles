@@ -27,7 +27,7 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: preq
-    
+
 # - name: creating directory
 #   ansible.builtin.file:
 #     path: /app
@@ -53,8 +53,8 @@
   ansible.builtin.template:
     src: backend.service.j2
     dest: /etc/systemd/system/backend.service
-    notify:
-    - Restart backend
+  notify:
+  - Restart backend
 
 - name: connecting to mysql
   community.mysql.mysql_db:
