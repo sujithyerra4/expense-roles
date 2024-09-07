@@ -34,9 +34,11 @@
   ansible.builtin.copy:
     src: expense.conf
     dest: /etc/nginx/default.d/expense.conf
+    notify:
+    - Restart nginx
 
-- name: reload the service
-  ansible.builtin.service:
-    daemon-reload: true
-    state: restarted
-    name: nginx 
+# - name: reload the service
+#   ansible.builtin.service:
+#     daemon-reload: true
+#     state: restarted
+#     name: nginx 
