@@ -1,2 +1,4 @@
 password: ExpenseApp@1
 host: mysql.sujithyerra.online
+app_loc: /app
+component: backend
