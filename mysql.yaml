@@ -1,7 +1,7 @@
 - name: configure db
   hosts: db
   vars_files:
-    /home/ec2-user/vault/credentials_mysql.yaml
+  - /vault/credentials_mysql.yaml
   become: yes
   roles:
   - mysql
